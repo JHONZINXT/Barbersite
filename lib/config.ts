@@ -46,17 +46,17 @@ export const siteConfig = {
   servicesEyebrow: "Cuidado masculino",
   servicesTitle: "Serviços",
   servicesImage: {
-    src: undefined as string | undefined,
+    src: "/servicos/oficio.jpg" as string | undefined,
     label:
       "Foto editorial: close-up de mãos de barbeiro segurando navalha e pente, luz dramática lateral, fundo escuro — vertical, 1024×1536",
   },
   services: [
-    { name: "Corte", desc: "Do social clássico ao degradê preciso, sempre na medida certa pro seu rosto.", price: "R$ 30", icon: "scissors", image: undefined as string | undefined },
-    { name: "Barba", desc: "Toalha quente, navalha afiada e o desenho que só experiência entrega.", price: "R$ 20", featured: true, icon: "razor", image: undefined as string | undefined },
-    { name: "Aparo de Barba", desc: "Manutenção rápida entre uma sessão completa e outra.", price: "R$ 15", icon: "clipper", image: undefined as string | undefined },
-    { name: "Facial", desc: "Limpeza profunda e hidratação pra fechar o visual com a pele em dia.", price: "R$ 40", icon: "droplet", image: undefined as string | undefined },
-    { name: "Styling", desc: "Finalização no produto certo — sem parecer produzido demais.", price: "R$ 25", icon: "comb", image: undefined as string | undefined },
-    { name: "Capilar", desc: "Cuidado que fortalece o fio antes que o problema apareça.", price: "R$ 35", icon: "leaf", image: undefined as string | undefined },
+    { name: "Corte", desc: "Do social clássico ao degradê preciso, sempre na medida certa pro seu rosto.", price: "R$ 30", icon: "scissors", image: "/servicos/corte.jpg" as string | undefined },
+    { name: "Barba", desc: "Toalha quente, navalha afiada e o desenho que só experiência entrega.", price: "R$ 20", featured: true, icon: "razor", image: "/servicos/barba.jpg" as string | undefined },
+    { name: "Aparo de Barba", desc: "Manutenção rápida entre uma sessão completa e outra.", price: "R$ 15", icon: "clipper", image: "/servicos/aparo.jpg" as string | undefined },
+    { name: "Facial", desc: "Limpeza profunda e hidratação pra fechar o visual com a pele em dia.", price: "R$ 40", icon: "droplet", image: "/servicos/facial.jpg" as string | undefined },
+    { name: "Styling", desc: "Finalização no produto certo — sem parecer produzido demais.", price: "R$ 25", icon: "comb", image: "/servicos/styling.jpg" as string | undefined },
+    { name: "Capilar", desc: "Cuidado que fortalece o fio antes que o problema apareça.", price: "R$ 35", icon: "leaf", image: "/servicos/capilar.jpg" as string | undefined },
   ],
 
   productsEyebrow: "Uso profissional",
