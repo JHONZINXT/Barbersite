@@ -26,7 +26,10 @@ export const siteConfig = {
     accentLineIndex: 1,
     subtitle:
       "Corte preciso, barba desenhada e um atendimento que respeita seu horário. Sem espera, sem improviso.",
-    trustLine: "★★★★★ 4.9 de 5 — mais de 500 clientes atendidos por mês",
+    // Evite estatísticas inventadas aqui (ex: "+500 clientes/mês") — isso é propaganda
+    // enganosa se for ao ar sem ser real. Quando o barbeiro tiver avaliações reais no
+    // Google, troque por algo como: "★★★★★ 4.8 de 5 — 120 avaliações no Google".
+    trustLine: "Resposta no WhatsApp em minutos — sem compromisso",
     ctaLabel: "Reservar meu horário",
     secondaryLabel: "Conhecer serviços",
     photo: {
@@ -84,13 +87,17 @@ export const siteConfig = {
     },
   ],
 
+  // ⚠️ Depoimentos abaixo são EXEMPLOS ILUSTRATIVOS pra demonstração.
+  // Antes de publicar pro cliente final, troque por depoimentos reais — com
+  // autorização de quem falou. Depoimento inventado atribuído a um nome é
+  // propaganda enganosa, mesmo que o texto pareça genérico.
   testimonials: {
     title: "Quem já sentou na cadeira",
     subtitle: "Histórias reais de quem virou cliente fiel.",
     items: [
       { quote: "Cheguei no horário marcado e fui atendido na hora. Isso já vale metade da nota.", name: "Marcos R.", role: "Cliente há 1 ano", rating: 5 },
       { quote: "O desenho da barba saiu exatamente como eu queria, sem eu precisar explicar duas vezes.", name: "Felipe A.", role: "Cliente fixo", rating: 5 },
-      { quote: "Ambiente gostoso, sem enrolação, saio sempre satisfeito.", name: "Diego S.", role: "Cliente do combo", rating: 5 },
+      { quote: "Troquei de barbearia depois de anos indo na mesma. Não me arrependi uma vez sequer.", name: "Diego S.", role: "Cliente do combo", rating: 5 },
     ],
   },
 
