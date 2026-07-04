@@ -28,7 +28,7 @@ export default function Hero() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative min-h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden px-5 pt-24 pb-16">
+    <section className="relative isolate min-h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden px-5 pt-24 pb-16">
       <div className="absolute inset-0 -z-20">
         <SlotImage
           src={siteConfig.hero.photo.src}
