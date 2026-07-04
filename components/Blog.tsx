@@ -24,13 +24,16 @@ export default function Blog() {
       <div className="max-w-4xl mx-auto">
         <div ref={trackRef} className="flex gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2">
           {siteConfig.blog.map((b, i) => (
-            <motion.div
+            <motion.a
               key={b.title}
+              href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Vi a dica "${b.title}" no site e queria saber mais.`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: (i % 4) * 0.06 }}
-              className="snap-start shrink-0 w-[280px] rounded-xl overflow-hidden border border-amber/15 bg-card transition-transform hover:-translate-y-1 active:-translate-y-1"
+              className="snap-start shrink-0 w-[280px] rounded-xl overflow-hidden border border-amber/15 bg-card transition-transform hover:-translate-y-1 active:-translate-y-1 block"
             >
               <SlotImage
                 src={b.image}
@@ -43,9 +46,9 @@ export default function Blog() {
                   {b.title}
                 </div>
                 <p className="text-xs opacity-70 leading-relaxed my-2.5 mb-3">{b.excerpt}</p>
-                <div className="font-mono text-[11px] text-amber uppercase tracking-wide">Leia mais →</div>
+                <div className="font-mono text-[11px] text-amber uppercase tracking-wide">Perguntar no WhatsApp →</div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 

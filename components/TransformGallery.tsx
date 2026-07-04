@@ -62,7 +62,7 @@ export default function TransformGallery() {
         {siteConfig.gallery.ghostWord}
       </div>
 
-      <div ref={pinRef} className="relative" style={{ height: "320vh" }}>
+      <div ref={pinRef} className="relative" style={{ height: "220vh" }}>
         <div className="sticky-inner sticky top-0 h-[100svh] flex flex-col justify-center overflow-hidden">
           <div ref={trackRef} className="flex items-center gap-5 md:gap-8 px-5 md:px-14 will-change-transform">
             {siteConfig.gallery.pairs.map((pair, i) => (

@@ -46,12 +46,12 @@ export const siteConfig = {
   servicesEyebrow: "Cuidado masculino",
   servicesTitle: "Serviços",
   services: [
-    { name: "Corte", desc: "Do social clássico ao degradê preciso, sempre na medida certa pro seu rosto.", price: "R$ 30" },
-    { name: "Barba", desc: "Toalha quente, navalha afiada e o desenho que só experiência entrega.", price: "R$ 20", featured: true },
-    { name: "Aparo de Barba", desc: "Manutenção rápida entre uma sessão completa e outra.", price: "R$ 15" },
-    { name: "Facial", desc: "Limpeza profunda e hidratação pra fechar o visual com a pele em dia.", price: "R$ 40" },
-    { name: "Styling", desc: "Finalização no produto certo — sem parecer produzido demais.", price: "R$ 25" },
-    { name: "Capilar", desc: "Cuidado que fortalece o fio antes que o problema apareça.", price: "R$ 35" },
+    { name: "Corte", desc: "Do social clássico ao degradê preciso, sempre na medida certa pro seu rosto.", price: "R$ 30", icon: "scissors" },
+    { name: "Barba", desc: "Toalha quente, navalha afiada e o desenho que só experiência entrega.", price: "R$ 20", featured: true, icon: "razor" },
+    { name: "Aparo de Barba", desc: "Manutenção rápida entre uma sessão completa e outra.", price: "R$ 15", icon: "clipper" },
+    { name: "Facial", desc: "Limpeza profunda e hidratação pra fechar o visual com a pele em dia.", price: "R$ 40", icon: "droplet" },
+    { name: "Styling", desc: "Finalização no produto certo — sem parecer produzido demais.", price: "R$ 25", icon: "comb" },
+    { name: "Capilar", desc: "Cuidado que fortalece o fio antes que o problema apareça.", price: "R$ 35", icon: "leaf" },
   ],
 
   productsEyebrow: "Uso profissional",
