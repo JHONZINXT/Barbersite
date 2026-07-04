@@ -64,3 +64,46 @@ body {
   height: 20px;
   background: repeating-linear-gradient(0deg, #e8942c 0 4px, transparent 4px 8px);
 }
+
+/* Névoa âmbar respirando — brilho ambiente infinito e sutil, usado atrás da seção de Serviços */
+@keyframes aurora-drift {
+  0% { transform: translate(-4%, -2%) scale(1); }
+  50% { transform: translate(3%, 4%) scale(1.15); }
+  100% { transform: translate(-4%, -2%) scale(1); }
+}
+.services-aurora {
+  position: absolute;
+  inset: -15%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(70px);
+  opacity: 0.35;
+  background:
+    radial-gradient(circle at 25% 30%, rgba(232, 148, 44, 0.55), transparent 55%),
+    radial-gradient(circle at 75% 70%, rgba(92, 26, 36, 0.5), transparent 55%);
+  animation: aurora-drift 22s ease-in-out infinite;
+}
+
+/* Fios de cabelo caindo — referência literal ao ofício, bem discreta */
+@keyframes hair-fall {
+  0% { transform: translateY(-10%) rotate(0deg); opacity: 0; }
+  12% { opacity: 0.45; }
+  88% { opacity: 0.25; }
+  100% { transform: translateY(650%) rotate(35deg); opacity: 0; }
+}
+.hair-particle {
+  position: absolute;
+  top: 0;
+  width: 1.5px;
+  height: 16px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, transparent, rgba(232, 148, 44, 0.6), transparent);
+  animation: hair-fall linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-aurora,
+  .hair-particle {
+    animation: none;
+  }
+}

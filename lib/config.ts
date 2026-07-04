@@ -45,6 +45,11 @@ export const siteConfig = {
 
   servicesEyebrow: "Cuidado masculino",
   servicesTitle: "Serviços",
+  servicesImage: {
+    src: undefined as string | undefined,
+    label:
+      "Foto editorial: close-up de mãos de barbeiro segurando navalha e pente, luz dramática lateral, fundo escuro — vertical, 1024×1536",
+  },
   services: [
     { name: "Corte", desc: "Do social clássico ao degradê preciso, sempre na medida certa pro seu rosto.", price: "R$ 30", icon: "scissors" },
     { name: "Barba", desc: "Toalha quente, navalha afiada e o desenho que só experiência entrega.", price: "R$ 20", featured: true, icon: "razor" },
