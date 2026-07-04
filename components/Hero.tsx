@@ -84,7 +84,7 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         className="font-mono text-[11px] uppercase tracking-[0.2em] text-amber border border-amber/50 px-4 py-1.5 rounded-full mb-4 relative z-10"
       >
-        {siteConfig.address}
+        {siteConfig.addressBadge}
       </motion.div>
 
       <h1 className="font-display uppercase leading-[0.86] text-[52px] md:text-[110px] lg:text-[150px] relative z-10">

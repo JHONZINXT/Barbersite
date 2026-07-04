@@ -3,13 +3,6 @@
 import { useEffect, useState } from "react";
 import { siteConfig } from "@/lib/config";
 
-const LINKS = [
-  { href: "#servicos", label: "Serviços" },
-  { href: "#produtos", label: "Produtos" },
-  { href: "#galeria", label: "Galeria" },
-  { href: "#feedbacks", label: "Feedbacks" },
-];
-
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,7 +24,7 @@ export default function Nav() {
       </div>
 
       <div className="hidden md:flex items-center gap-8">
-        {LINKS.map((l) => (
+        {siteConfig.nav.map((l) => (
           <a key={l.href} href={l.href} className="text-xs font-semibold uppercase tracking-wide opacity-85 hover:opacity-100 transition-opacity">
             {l.label}
           </a>
@@ -40,7 +33,7 @@ export default function Nav() {
           href="#agendar"
           className="min-h-[48px] flex items-center bg-amber text-ink font-extrabold text-xs uppercase tracking-wide px-5 rounded"
         >
-          Marcar horário
+          {siteConfig.navCta}
         </a>
       </div>
 
@@ -56,7 +49,7 @@ export default function Nav() {
 
       {menuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-ink/95 backdrop-blur-md border-b border-amber/25 flex flex-col p-5 gap-1">
-          {LINKS.map((l) => (
+          {siteConfig.nav.map((l) => (
             <a
               key={l.href}
               href={l.href}
@@ -71,7 +64,7 @@ export default function Nav() {
             onClick={() => setMenuOpen(false)}
             className="min-h-[48px] flex items-center justify-center bg-amber text-ink font-extrabold text-sm uppercase tracking-wide rounded mt-2"
           >
-            Marcar horário
+            {siteConfig.navCta}
           </a>
         </div>
       )}

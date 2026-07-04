@@ -26,6 +26,10 @@ export default function Testimonials() {
                 className="w-[42px] h-[42px] rounded-full mb-3.5"
                 style={{ background: "conic-gradient(from 0deg, #E8942C, #F5B45C, #2A1E16, #E8942C)" }}
               />
+              <div className="text-amber text-xs mb-2 tracking-wide" aria-label={`${t.rating} de 5 estrelas`}>
+                {"★".repeat(t.rating)}
+                <span className="opacity-25">{"★".repeat(5 - t.rating)}</span>
+              </div>
               <p className="text-[13.5px] leading-relaxed mb-3.5 opacity-90">&ldquo;{t.quote}&rdquo;</p>
               <div className="font-semibold text-sm">{t.name}</div>
               <div className="font-mono text-[10.5px] text-amber uppercase">{t.role}</div>

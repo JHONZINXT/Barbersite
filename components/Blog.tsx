@@ -17,7 +17,7 @@ export default function Blog() {
   return (
     <section id="blog" className="px-5 md:px-14 py-16 md:py-28">
       <div className="text-center max-w-xl mx-auto mb-12 md:mb-16">
-        <span className="block font-mono text-xs uppercase tracking-[0.2em] text-amber mb-3">Dicas da barbearia</span>
+        <span className="block font-mono text-xs uppercase tracking-[0.2em] text-amber mb-3">{siteConfig.blogEyebrow}</span>
         <h2 className="font-display uppercase text-[30px] md:text-[50px]">{siteConfig.blogTitle}</h2>
       </div>
 

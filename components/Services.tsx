@@ -13,7 +13,7 @@ export default function Services() {
   return (
     <section id="servicos" className="px-5 md:px-14 py-16 md:py-28">
       <div className="text-center max-w-xl mx-auto mb-12 md:mb-16">
-        <span className="block font-mono text-xs uppercase tracking-[0.2em] text-amber mb-3">Cuidado masculino</span>
+        <span className="block font-mono text-xs uppercase tracking-[0.2em] text-amber mb-3">{siteConfig.servicesEyebrow}</span>
         <h2 className="font-display uppercase text-[30px] md:text-[50px]">{siteConfig.servicesTitle}</h2>
       </div>
 
