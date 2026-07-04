@@ -40,9 +40,7 @@ export default function StickyMobileCTA() {
           className="md:hidden fixed bottom-0 left-0 right-0 z-[140] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)] pt-3 bg-gradient-to-t from-ink via-ink/95 to-transparent"
         >
           <a
-            href={`https://wa.me/${siteConfig.whatsapp}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#agendar"
             className="min-h-[50px] w-full flex items-center justify-center rounded font-extrabold text-sm uppercase tracking-wide bg-amber text-ink active:scale-[0.98] transition-transform shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)]"
           >
             {siteConfig.stickyCta.label}

@@ -51,13 +51,33 @@ export const siteConfig = {
       "Foto editorial: close-up de mãos de barbeiro segurando navalha e pente, luz dramática lateral, fundo escuro — vertical, 1024×1536",
   },
   services: [
-    { name: "Corte", desc: "Do social clássico ao degradê preciso, sempre na medida certa pro seu rosto.", price: "R$ 30", icon: "scissors", image: "/servicos/corte.jpg" as string | undefined },
-    { name: "Barba", desc: "Toalha quente, navalha afiada e o desenho que só experiência entrega.", price: "R$ 20", featured: true, icon: "razor", image: "/servicos/barba.jpg" as string | undefined },
-    { name: "Aparo de Barba", desc: "Manutenção rápida entre uma sessão completa e outra.", price: "R$ 15", icon: "clipper", image: "/servicos/aparo.jpg" as string | undefined },
-    { name: "Facial", desc: "Limpeza profunda e hidratação pra fechar o visual com a pele em dia.", price: "R$ 40", icon: "droplet", image: "/servicos/facial.jpg" as string | undefined },
-    { name: "Styling", desc: "Finalização no produto certo — sem parecer produzido demais.", price: "R$ 25", icon: "comb", image: "/servicos/styling.jpg" as string | undefined },
-    { name: "Capilar", desc: "Cuidado que fortalece o fio antes que o problema apareça.", price: "R$ 35", icon: "leaf", image: "/servicos/capilar.jpg" as string | undefined },
+    { slug: "corte", name: "Corte", desc: "Do social clássico ao degradê preciso, sempre na medida certa pro seu rosto.", price: "R$ 30", durationMinutes: 30, icon: "scissors", image: "/servicos/corte.jpg" as string | undefined },
+    { slug: "barba", name: "Barba", desc: "Toalha quente, navalha afiada e o desenho que só experiência entrega.", price: "R$ 20", durationMinutes: 25, featured: true, icon: "razor", image: "/servicos/barba.jpg" as string | undefined },
+    { slug: "aparo", name: "Aparo de Barba", desc: "Manutenção rápida entre uma sessão completa e outra.", price: "R$ 15", durationMinutes: 15, icon: "clipper", image: "/servicos/aparo.jpg" as string | undefined },
+    { slug: "facial", name: "Facial", desc: "Limpeza profunda e hidratação pra fechar o visual com a pele em dia.", price: "R$ 40", durationMinutes: 35, icon: "droplet", image: "/servicos/facial.jpg" as string | undefined },
+    { slug: "styling", name: "Styling", desc: "Finalização no produto certo — sem parecer produzido demais.", price: "R$ 25", durationMinutes: 20, icon: "comb", image: "/servicos/styling.jpg" as string | undefined },
+    { slug: "capilar", name: "Capilar", desc: "Cuidado que fortalece o fio antes que o problema apareça.", price: "R$ 35", durationMinutes: 30, icon: "leaf", image: "/servicos/capilar.jpg" as string | undefined },
   ],
+
+  // ⚠️ Barbeiros de EXEMPLO pra demonstração. Troque pelos profissionais reais
+  // antes de publicar — o "slug" é o identificador interno (sem espaço/acento),
+  // usado pra ligar cada barbeiro à sua própria agenda no banco de dados.
+  barbers: [
+    { slug: "diego", name: "Diego", role: "Mestre Barbeiro", bio: "15 anos de navalha, especialista em barba desenhada.", photo: undefined as string | undefined },
+    { slug: "kayo", name: "Kayo", role: "Barbeiro", bio: "Referência em degradê e cortes de tendência.", photo: undefined as string | undefined },
+    { slug: "renan", name: "Renan", role: "Barbeiro", bio: "Atendimento infantil e cortes sociais impecáveis.", photo: undefined as string | undefined },
+  ],
+
+  // Regras do sistema de agendamento. Fuso fixo (Recife não tem horário de
+  // verão desde 2019, então um offset fixo é seguro o ano inteiro).
+  booking: {
+    utcOffset: "-03:00",
+    slotGranularityMinutes: 15,
+    minLeadMinutes: 60,
+    maxAdvanceDays: 21,
+    title: "Agendar horário",
+    subtitle: "Escolha o profissional, o serviço e o melhor horário — sem precisar perguntar por WhatsApp se está livre.",
+  },
 
   productsEyebrow: "Uso profissional",
   productsTitle: "Produtos da Casa",
