@@ -10,7 +10,6 @@ export const siteConfig = {
   brandNameAccent: "Style",
   brandNameFull: "Slick Style Barbershop",
   address: "Rio Doce, Olinda — PE",
-  addressBadge: "📍 Rio Doce, Olinda — PE",
   instagram: "@slickstylebarber",
   whatsapp: "5581999999999",
 
@@ -27,7 +26,8 @@ export const siteConfig = {
     accentLineIndex: 1,
     subtitle:
       "Corte preciso, barba desenhada e um atendimento que respeita seu horário. Sem espera, sem improviso.",
-    ctaLabel: "Reservar horário",
+    trustLine: "★★★★★ 4.9 de 5 — mais de 500 clientes atendidos por mês",
+    ctaLabel: "Reservar meu horário",
     secondaryLabel: "Conhecer serviços",
     photo: {
       label:
@@ -35,7 +35,11 @@ export const siteConfig = {
     },
   },
 
-  servicesEyebrow: "💈 Cuidado masculino",
+  stickyCta: {
+    label: "Reservar meu horário",
+  },
+
+  servicesEyebrow: "Cuidado masculino",
   servicesTitle: "Serviços",
   services: [
     { name: "Corte", desc: "Do social clássico ao degradê preciso, sempre na medida certa pro seu rosto.", price: "R$ 30" },
@@ -46,7 +50,7 @@ export const siteConfig = {
     { name: "Capilar", desc: "Cuidado que fortalece o fio antes que o problema apareça.", price: "R$ 35" },
   ],
 
-  productsEyebrow: "✨ Uso profissional",
+  productsEyebrow: "Uso profissional",
   productsTitle: "Produtos da Casa",
   products: [
     { name: "Pincel de Barba", price: "R$ 45" },
@@ -63,7 +67,7 @@ export const siteConfig = {
     count: 6,
   },
 
-  blogEyebrow: "🗒️ Dicas & cuidados",
+  blogEyebrow: "Dicas & cuidados",
   blogTitle: "Journal",
   blog: [
     {
@@ -92,6 +96,6 @@ export const siteConfig = {
 
   cta: {
     lines: ["Sua melhor versão", "começa aqui"],
-    whatsappLabel: "📲 Chamar no WhatsApp",
+    whatsappLabel: "Falar agora no WhatsApp",
   },
 } as const;

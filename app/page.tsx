@@ -6,6 +6,7 @@ import TransformGallery from "@/components/TransformGallery";
 import Blog from "@/components/Blog";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Blog />
       <Testimonials />
       <CTA />
+      <StickyMobileCTA />
     </main>
   );
 }
