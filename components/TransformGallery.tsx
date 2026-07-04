@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { siteConfig } from "@/lib/config";
-import PhotoSlot from "./PhotoSlot";
+import SlotImage from "./SlotImage";
 
 export default function TransformGallery() {
   const pinRef = useRef<HTMLDivElement>(null);
@@ -48,8 +48,6 @@ export default function TransformGallery() {
     };
   }, []);
 
-  const cards = Array.from({ length: siteConfig.gallery.count });
-
   return (
     <section id="galeria" className="pt-0">
       <div className="text-center py-9 md:py-13 px-5" style={{ background: "linear-gradient(160deg, #E8942C, #F5B45C)", color: "#14100C" }}>
@@ -67,15 +65,15 @@ export default function TransformGallery() {
       <div ref={pinRef} className="relative" style={{ height: "320vh" }}>
         <div className="sticky-inner sticky top-0 h-[100svh] flex flex-col justify-center overflow-hidden">
           <div ref={trackRef} className="flex items-center gap-5 md:gap-8 px-5 md:px-14 will-change-transform">
-            {cards.map((_, i) => (
+            {siteConfig.gallery.pairs.map((pair, i) => (
               <div
                 key={i}
                 className={`min-w-[280px] md:min-w-[320px] aspect-[16/11] rounded-[14px] shrink-0 flex overflow-hidden border-[3px] border-amber/70 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.65)] transition-transform duration-300 ${
                   i % 3 === 1 ? "scale-105 -translate-y-1.5" : ""
                 }`}
               >
-                <PhotoSlot label="Antes" className="flex-1" />
-                <PhotoSlot label="Depois" className="flex-1" />
+                <SlotImage src={pair.before ?? undefined} alt={`Cliente ${i + 1} antes`} placeholderLabel="Antes" className="flex-1" />
+                <SlotImage src={pair.after ?? undefined} alt={`Cliente ${i + 1} depois`} placeholderLabel="Depois" className="flex-1" />
               </div>
             ))}
           </div>

@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/lib/config";
-import PhotoSlot from "./PhotoSlot";
+import SlotImage from "./SlotImage";
 
 export default function ProductCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -36,7 +36,12 @@ export default function ProductCarousel() {
               transition={{ duration: 0.6, delay: (i % 4) * 0.06 }}
               className="snap-start shrink-0 w-[220px] text-center"
             >
-              <PhotoSlot label={`Foto:\n${p.name}\n(quadrada, fundo neutro)`} className="w-full aspect-square rounded-lg mb-3.5" />
+              <SlotImage
+                src={p.image}
+                alt={p.name}
+                placeholderLabel={`Foto:\n${p.name}\n(quadrada, fundo neutro)`}
+                className="w-full aspect-square rounded-lg mb-3.5"
+              />
               <div className="font-semibold text-sm mb-1">{p.name}</div>
               <div className="font-mono text-amber text-[13px]">{p.price}</div>
             </motion.div>

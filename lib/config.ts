@@ -33,6 +33,7 @@ export const siteConfig = {
     ctaLabel: "Reservar meu horário",
     secondaryLabel: "Conhecer serviços",
     photo: {
+      src: "/hero/barbeiro-bg.jpg",
       label:
         "Foto de fundo: barbeiro sentado, plano médio — 1600×1400, foco no rosto/barba, espaço livre no topo pro título",
     },
@@ -56,18 +57,29 @@ export const siteConfig = {
   productsEyebrow: "Uso profissional",
   productsTitle: "Produtos da Casa",
   products: [
-    { name: "Pincel de Barba", price: "R$ 45" },
-    { name: "Tesoura Profissional", price: "R$ 120" },
-    { name: "Máquina de Corte", price: "R$ 220" },
-    { name: "Óleo para Barba", price: "R$ 35" },
-    { name: "Pomada Modeladora", price: "R$ 28" },
+    { name: "Pincel de Barba", price: "R$ 45", image: "/produtos/pincel.jpg" },
+    { name: "Tesoura Profissional", price: "R$ 120", image: "/produtos/tesoura.jpg" },
+    { name: "Máquina de Corte", price: "R$ 220", image: "/produtos/maquina.jpg" },
+    { name: "Óleo para Barba", price: "R$ 35", image: "/produtos/oleo.jpg" },
+    { name: "Pomada Modeladora", price: "R$ 28", image: "/produtos/pomada.jpg" },
   ],
 
+  // ⚠️ Estas fotos de antes/depois são geradas por IA para fins de DEMONSTRAÇÃO
+  // (pitch de venda). Antes de publicar pro cliente final, troque por fotos reais
+  // de clientes de verdade, com autorização deles — ou ajuste a legenda abaixo
+  // para algo como "Exemplos de estilo" em vez de "Resultado real".
   gallery: {
     title: "Transformações",
     subtitle: "Resultado real de quem confiou na cadeira certa.",
     ghostWord: "TRANSFORMAÇÃO",
-    count: 6,
+    pairs: [
+      { before: "/galeria/cliente-1-antes.jpg", after: "/galeria/cliente-1-depois.jpg" },
+      { before: "/galeria/cliente-2-antes.jpg", after: "/galeria/cliente-2-depois.jpg" },
+      { before: "/galeria/cliente-3-antes.jpg", after: "/galeria/cliente-3-depois.jpg" },
+      { before: null, after: null },
+      { before: null, after: null },
+      { before: null, after: null },
+    ],
   },
 
   blogEyebrow: "Dicas & cuidados",
@@ -76,14 +88,17 @@ export const siteConfig = {
     {
       title: "O ritual diário que toda barba merece",
       excerpt: "Três passos simples que separam uma barba bem cuidada de uma barba deixada ao acaso.",
+      image: "/blog/post-1.jpg",
     },
     {
       title: "Os cortes que vão dominar 2026",
       excerpt: "Do fade texturizado ao clássico revisitado — o que mais está saindo da cadeira este ano.",
+      image: "/blog/post-2.jpg",
     },
     {
       title: "Prevenção é mais barata que reparo",
       excerpt: "Pequenos cuidados capilares evitam grandes visitas de emergência depois.",
+      image: "/blog/post-3.jpg",
     },
   ],
 

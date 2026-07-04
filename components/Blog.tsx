@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/lib/config";
-import PhotoSlot from "./PhotoSlot";
+import SlotImage from "./SlotImage";
 
 export default function Blog() {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -32,7 +32,12 @@ export default function Blog() {
               transition={{ duration: 0.6, delay: (i % 4) * 0.06 }}
               className="snap-start shrink-0 w-[280px] rounded-xl overflow-hidden border border-amber/15 bg-card transition-transform hover:-translate-y-1 active:-translate-y-1"
             >
-              <PhotoSlot label={"Foto do post\n(16:10)"} className="w-full aspect-[16/10]" />
+              <SlotImage
+                src={b.image}
+                alt={b.title}
+                placeholderLabel={"Foto do post\n(16:10)"}
+                className="w-full aspect-[16/10]"
+              />
               <div className="p-5">
                 <div className="font-display uppercase text-base mb-2 leading-tight border-b-2 border-dotted border-amber/40 pb-2.5">
                   {b.title}

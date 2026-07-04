@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/lib/config";
-import PhotoSlot from "./PhotoSlot";
+import SlotImage from "./SlotImage";
 
 function KineticLine({ text, accent, delayStart }: { text: string; accent?: boolean; delayStart: number }) {
   const chars = [...text];
@@ -30,7 +30,13 @@ export default function Hero() {
   return (
     <section className="relative min-h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden px-5 pt-24 pb-16">
       <div className="absolute inset-0 -z-20">
-        <PhotoSlot label={siteConfig.hero.photo.label} className="w-full h-full" />
+        <SlotImage
+          src={siteConfig.hero.photo.src}
+          alt="Barbeiro em atendimento"
+          placeholderLabel={siteConfig.hero.photo.label}
+          className="w-full h-full"
+          priority
+        />
         <div
           className="absolute inset-0"
           style={{ background: "linear-gradient(180deg, rgba(20,16,12,.35) 0%, rgba(20,16,12,.75) 65%, #14100C 100%)" }}
